@@ -43,5 +43,5 @@ def register(request):
             auth.login(request, user)
             return redirect('home')
         else:
-            messages.error("Password does not match")
+            messages.error(request, "Password does not match")
     return redirect('auth')
