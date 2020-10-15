@@ -49,7 +49,7 @@ class Credentials():
 		storing the key and create a credential file with user name and password 
 		"""
 
-		cred_filename = 'CredFile.ini'
+		cred_filename = 'Login Details.ini'
 
 		with open(cred_filename,'w') as file_in: 
 			file_in.write("#Credential file:\nUsername={}\nPassword={}\n"
@@ -87,20 +87,3 @@ class Credentials():
 		self.__password = "" 
 		self.__key = "" 
 		self.__key_file 
-
-
-def main(): 
-
-	# Creating an object for Credentials class 
-	creds = Credentials() 
-
-	#Accepting credentials 
-	creds.username = input("Enter UserName:") 
-	creds.password = input("Enter Password:") 
-
-	#calling the Credit 
-	creds.create_cred() 
-	print("**"*20) 
-	print("Cred file created successfully at {}".format(time.ctime()))
-
-	print("**"*20)
