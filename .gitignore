@@ -131,3 +131,4 @@ dmypy.json
 # Ignore local files created by script
 .idea
 .idea/
+config.py
