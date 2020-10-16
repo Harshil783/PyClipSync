@@ -14,163 +14,246 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">font: 8px &quot;Lato&quot;;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>1440</width>
-      <height>1024</height>
-     </rect>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <property name="leftMargin">
+     <number>0</number>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+    <property name="topMargin">
+     <number>0</number>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+    <property name="rightMargin">
+     <number>0</number>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>311</width>
-       <height>991</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>Images/side_menu.png</pixmap>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>37</x>
-       <y>49</y>
-       <width>251</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(109, 0, 220);
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(33, 37, 43);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QFrame" name="frame_2">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>-20</y>
+              <width>311</width>
+              <height>1021</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>Images/side_menu.png</pixmap>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pyclip_git">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>30</y>
+              <width>251</width>
+              <height>71</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Lato</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:0px;
 color: rgb(255, 255, 255);
+background-color: rgb(108, 0, 219);
 font: 48px &quot;Lato&quot;;</string>
-     </property>
-     <property name="text">
-      <string>PyClipSync</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>36</x>
-       <y>127</y>
-       <width>241</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(114, 0, 221);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>Images/Line.png</pixmap>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>180</y>
-       <width>55</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(116, 0, 222);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>240</y>
-       <width>55</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(119, 0, 223);</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>178</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:0px;
-background-color: rgb(117, 1, 223);
-font: 24px &quot;Lato&quot;;
-color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Account</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>251</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border:0px;
-background-color: rgb(119, 0, 223);
+            </property>
+            <property name="text">
+             <string>PyClipSync</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="open_account">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>150</y>
+              <width>131</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:0px;
 color: rgb(255, 255, 255);
-font: 24px &quot;Lato&quot;;</string>
-     </property>
-     <property name="text">
-      <string>Settings</string>
-     </property>
-    </widget>
-   </widget>
+background-color: rgb(117, 0, 222);
+font: 30px &quot;Lato&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Account</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="open_settings">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>220</y>
+              <width>121</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:0px;
+color: rgb(255, 255, 255);
+background-color: rgb(121, 1, 223);
+font: 30px &quot;Lato&quot;;</string>
+            </property>
+            <property name="text">
+             <string>Settings</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>930</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(163, 0, 236);
+border:0px;
+font-size:24px;</string>
+            </property>
+            <property name="text">
+             <string>Logout</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>462</x>
+              <y>134</y>
+              <width>101</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(255, 255, 255, 0.5);
+font-size:24px;</string>
+            </property>
+            <property name="text">
+             <string>Clip Text</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>776</x>
+              <y>136</y>
+              <width>141</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(255, 255, 255, 0.5);
+font-size:24px;</string>
+            </property>
+            <property name="text">
+             <string>Copied Date</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>1095</x>
+              <y>135</y>
+              <width>131</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgba(255, 255, 255, 0.5);
+font-size:24px;</string>
+            </property>
+            <property name="text">
+             <string>Sync Status</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="close1">
+            <property name="geometry">
+             <rect>
+              <x>1342</x>
+              <y>10</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:0px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="minimize">
+            <property name="geometry">
+             <rect>
+              <x>1260</x>
+              <y>10</y>
+              <width>61</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border:0px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1440</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

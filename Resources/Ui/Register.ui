@@ -244,9 +244,9 @@ color: rgba(255, 255, 255, 0.26);</string>
     <widget class="QPushButton" name="close1">
      <property name="geometry">
       <rect>
-       <x>742</x>
+       <x>752</x>
        <y>10</y>
-       <width>51</width>
+       <width>41</width>
        <height>41</height>
       </rect>
      </property>
@@ -260,9 +260,9 @@ color: rgba(255, 255, 255, 0.26);</string>
     <widget class="QPushButton" name="minimize">
      <property name="geometry">
       <rect>
-       <x>680</x>
+       <x>700</x>
        <y>10</y>
-       <width>51</width>
+       <width>41</width>
        <height>41</height>
       </rect>
      </property>
