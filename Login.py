@@ -41,6 +41,7 @@ class UI(QMainWindow):
 		self.move(qr.topLeft())
 
 	def call_childs(self):
+		self.forget1 = self.pass_forgot
 		self.sign_up = self.sign_up_ui
 		self.email = self.email_edit
 		self.password = self.password_edit
@@ -49,6 +50,7 @@ class UI(QMainWindow):
 		self.close2 = self.close1
 
 	def child_functions(self):
+		self.forget1.clicked.connect(self.pass_forgot1)
 		self.login_bt.clicked.connect(self.credentials)
 		self.sign_up.clicked.connect(self.sign_in_click)
 		self.min1.clicked.connect(self.get_mini)
@@ -63,6 +65,10 @@ class UI(QMainWindow):
 		self.close2.setIconSize(QtCore.QSize(100, 100))
 
 	# child_functions Defs
+	def pass_forgot1(self):
+		#email1
+		auth.send_password_reset_email(self.email.text())
+
 	def credentials(self):
 		global user
 		try:
