@@ -137,5 +137,5 @@ config.py
 #For PyQt5 VSCODE ERROR messages
 .pylintrc
 
-.key
+key.key
 .ini
