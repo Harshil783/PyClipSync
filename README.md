@@ -12,3 +12,4 @@ A Open Source Project Helps To Sync ClipBoard From Anywhere
 ## Done
 - Added Verifying User Email
 - Half Main Screen Gui Done
+- Added The Password Reset Option
