@@ -101,7 +101,7 @@ class UI(QMainWindow):
                         msg.setWindowTitle("Error")
                         msg.setInformativeText("Please CHeck The Logs For More Information")
                         msg.setText("An Unexpected Error occurred!")
-                        msg.setIcon(QMessageBox.warning)
+                        msg.setIcon(QMessageBox.critical)
                         x = msg.exec_()
                 else:
                     #print("Reache Here 3")
