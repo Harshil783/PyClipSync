@@ -81,8 +81,18 @@ class UI(QMainWindow):
             passw1 = str(self.password_repeat.text())
             if passw == passw1:
                 #print("Reache Here 1")
-                user = auth.create_user_with_email_and_password(
-                self.email.text(), self.password.text())
+                try:
+                    user = auth.create_user_with_email_and_password(
+                    self.email.text(), self.password.text())
+                except HTTPError as e:
+                    logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
+                    logging.error(e)
+                    msg = QMessageBox()
+                    msg.setWindowTitle("Error")
+                    msg.setInformativeText("This Email Is Already Registered")
+                    msg.setText("For More information please see The log file")
+                    msg.setIcon(QMessageBox.Critical)
+                    x = msg.exec_()
                 if user:
                     status = False
                     auth.send_email_verification(user['idToken'])
@@ -92,7 +102,7 @@ class UI(QMainWindow):
                             msg = QMessageBox()
                             msg.setWindowTitle("Registering Done")
                             msg.setText("Please Check Your Email Account For Confirming Email Registration")
-                            msg.setIcon(QMessageBox.information)
+                            msg.setIcon(QMessageBox.Warning)
                             x = msg.exec_()
                     except Exception as e:
                         logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
