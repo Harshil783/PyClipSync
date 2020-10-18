@@ -68,9 +68,9 @@ class UI(QMainWindow):
         email_check_test = str(self.email.text())
 
         bool_result_with_dns = is_email(email_check_test, check_dns=True)
-        #print(bool_result_with_dns)
+        # print(bool_result_with_dns)
         if bool_result_with_dns is not True:
-            #print("LEL")
+            # print("LEL")
             msg = QMessageBox()
             msg.setWindowTitle("Error In Email")
             msg.setText("Wrong Email Or Dns Is Not Valid")
@@ -83,14 +83,15 @@ class UI(QMainWindow):
                 #print("Reache Here 1")
                 try:
                     user = auth.create_user_with_email_and_password(
-                    self.email.text(), self.password.text())
-                except HTTPError as e:
-                    logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
+                        self.email.text(), self.password.text())
+                except Exception as e:
+                    logging.basicConfig(filename='error.log', filemode='w',
+                                        format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
                     logging.error(e)
                     msg = QMessageBox()
                     msg.setWindowTitle("Error")
-                    msg.setInformativeText("This Email Is Already Registered")
-                    msg.setText("For More information please see The log file")
+                    msg.setText("This Email Is Already Registered")
+                    msg.setInformativeText("For More information please see The log file")
                     msg.setIcon(QMessageBox.Critical)
                     x = msg.exec_()
                 if user:
@@ -101,27 +102,43 @@ class UI(QMainWindow):
                         if status is True:
                             msg = QMessageBox()
                             msg.setWindowTitle("Registering Done")
-                            msg.setText("Please Check Your Email Account For Confirming Email Registration")
+                            msg.setText(
+                                "Please Check Your Email Account For Confirming Email Registration")
                             msg.setIcon(QMessageBox.Warning)
                             x = msg.exec_()
                     except Exception as e:
-                        logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
+                        logging.basicConfig(filename='error.log', filemode='w',
+                                            format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
                         logging.error(e)
                         msg = QMessageBox()
                         msg.setWindowTitle("Error")
-                        msg.setInformativeText("Please CHeck The Logs For More Information")
+                        msg.setInformativeText(
+                            "Please CHeck The Logs For More Information")
                         msg.setText("An Unexpected Error occurred!")
                         msg.setIcon(QMessageBox.Critical)
                         x = msg.exec_()
                 else:
                     #print("Reache Here 3")
-                    logging.basicConfig(filename='error.log', filemode='w', format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
+                    logging.basicConfig(filename='error.log', filemode='w',
+                                        format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
                     logging.error(e)
                     msg = QMessageBox()
                     msg.setWindowTitle("Error While Registering")
-                    msg.setText("Please Check Your Connection Or The Password Is Not Same!")
+                    msg.setText(
+                        "Please Check Your Connection Or The Password Is Not Same!")
                     msg.setIcon(QMessageBox.Critical)
                     x = msg.exec_()
+            else:
+                logging.basicConfig(filename='error.log', filemode='w',
+                                    format='%(name)s - %(asctime)s - %(levelname)s - %(message)s')
+                logging.error(e)
+                msg = QMessageBox()
+                msg.setWindowTitle("Error")
+                msg.setInformativeText(
+                    "Password Does not match")
+                msg.setText("An Unexpected Error occurred!")
+                msg.setIcon(QMessageBox.Critical)
+                x = msg.exec_()
 
     def get_mini(self):
         self.showMinimized()
@@ -147,4 +164,4 @@ class UI(QMainWindow):
 app = QApplication(sys.argv)
 window = UI()
 app.exec_()
-#END HERE
+# END HERE
