@@ -226,9 +226,9 @@ font: 17px &quot;Poppins&quot;;</string>
     <widget class="QPushButton" name="minimize">
      <property name="geometry">
       <rect>
-       <x>690</x>
+       <x>700</x>
        <y>10</y>
-       <width>51</width>
+       <width>41</width>
        <height>41</height>
       </rect>
      </property>
@@ -242,9 +242,9 @@ font: 17px &quot;Poppins&quot;;</string>
     <widget class="QPushButton" name="close1">
      <property name="geometry">
       <rect>
-       <x>742</x>
+       <x>752</x>
        <y>10</y>
-       <width>51</width>
+       <width>41</width>
        <height>41</height>
       </rect>
      </property>
@@ -275,6 +275,46 @@ font: 17px &quot;Poppins&quot;;</string>
       <string>Wrong Email Or Password</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="pass_forgot">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>550</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(86, 56, 90);
+color: #FFB37B;
+border: 0px;
+font: 17px &quot;Poppins&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Click Here</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>550</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(86, 56, 90);
+color: rgb(255, 255, 255);
+font: 17px &quot;Poppins&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Forget Password?</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

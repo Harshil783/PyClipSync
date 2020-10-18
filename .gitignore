@@ -132,3 +132,10 @@ dmypy.json
 .idea
 .idea/
 config.py
+.logs
+
+#For PyQt5 VSCODE ERROR messages
+.pylintrc
+
+key.key
+.ini
